@@ -11,6 +11,10 @@ class IndexController extends Controller
         return view("index");
     }
 
+    public function formCalendar(Request $request){
+        return view("calendar.add");
+    }
+
     public function addCalendar(Request $request){
         return view("calendar.add");
     }
