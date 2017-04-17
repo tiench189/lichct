@@ -3,17 +3,38 @@
     Lịch công tác
 @stop
 @section('content')
-    <div style="font-size: 1.1em">
-        <div class="text-center pull-left">
-            BỘ GIÁO DỤC VÀ ĐÀO TẠO<br>
-            <strong>VĂN PHÒNG</strong>
+    <div>
+        <div style="font-size: 1.1em">
+            <div class="text-center pull-left">
+                BỘ GIÁO DỤC VÀ ĐÀO TẠO<br>
+                <strong>VĂN PHÒNG</strong>
+            </div>
+        </div>
+        <div class="pull-right text-center blur" style="padding-bottom: 20px">
+            <strong>LỊCH CÔNG TÁC CỦA LÃNH ĐẠO VĂN PHÒNG</strong><br>
+            Tuần <input type="text" id="week-picker" value="{{date("W")}}" class="form-control"
+                        style="width: 45px; display: initial; color: blue"><br>
+            <i>(Từ <span id="start-week">{{date( 'd/m/Y', strtotime( 'monday this week' ) )}}</span> đến <span
+                        id="end-week">{{date( 'd/m/Y', strtotime( 'sunday this week' ) )}}</span>)</i>
         </div>
     </div>
-    <div class="pull-right text-center blur">
-        <strong>LỊCH CÔNG TÁC CỦA LÃNH ĐẠO VĂN PHÒNG</strong><br>
-        Tuần <input type="text" id="week-picker" value="{{date("W")}}" class="form-control" style="width: 45px; display: initial; color: blue"><br>
-        <i>(Từ <span id="start-week">{{date( 'd/m/Y', strtotime( 'monday this week' ) )}}</span> đến <span id="end-week">{{date( 'd/m/Y', strtotime( 'sunday this week' ) )}}</span>)</i>
-    </div>
+    <table class="table table-bordered table-calendar">
+        @foreach($calendar as $key=>$row)
+            <tr>
+                <td colspan="2" class="blur"><strong>{{$key}}</strong></td>
+            </tr>
+            @foreach($row as $cal)
+                <tr>
+                    <td class="text-center">{{\App\Utils::timeInDay($cal->date_note)}}</td>
+                    <td>
+                        <strong>{{$cal->content}}</strong><br>
+                        <i>Thành phần tham dự: </i>{{$cal->member}}
+                    </td>
+                </tr>
+            @endforeach
+        @endforeach
+    </table>
+
     <script>
         convertToWeekPicker($("#week-picker"));
     </script>
