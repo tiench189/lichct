@@ -1,3 +1,8 @@
+<?php
+        if (isset($week)){
+            $week = date("W");
+        }
+?>
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
@@ -99,10 +104,10 @@
         <div class="list-menu">
             <div class="left-head">Danh mục</div>
             <ul>
-                <li class="active"><a href="#">Lịch tổng hợp</a></li>
+                <li class="{{strpos(\Request::getRequestUri(), "v=") !== false?'': 'active'}}"><a href="{{route('index', ['w' => $week])}}">Lịch tổng hợp</a></li>
                 <?php $viphuman = \App\Utils::getVipHumans()?>
                 @foreach($viphuman as $v)
-                    <li><a href="#">{{$v->name}}</a></li>
+                    <li class="{{strpos(\Request::getRequestUri(), "v=".$v->id) !== false?'active': ''}}"><a href="{{route('index', ['v' => $v->id, 'w' => $week])}}">{{$v->name}}</a></li>
                 @endforeach
             </ul>
         </div>

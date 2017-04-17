@@ -10,7 +10,7 @@
                 <strong>VĂN PHÒNG</strong>
             </div>
         </div>
-        <div class="pull-right text-center blur" style="padding-bottom: 20px">
+        <div class="pull-right text-center blur" style="padding-bottom: 40px">
             <strong>LỊCH CÔNG TÁC CỦA LÃNH ĐẠO VĂN PHÒNG</strong><br>
             Tuần <input type="text" id="week-picker" value="{{date("W")}}" class="form-control"
                         style="width: 45px; display: initial; color: blue"><br>
@@ -18,10 +18,13 @@
                         id="end-week">{{date( 'd/m/Y', strtotime( 'sunday this week' ) )}}</span>)</i>
         </div>
     </div>
+    <div style="position: absolute; margin-top: 70px">
+        <a class="btn btn-my" href="/update">Đăng kí lịch</a>
+    </div>
     <table class="table table-bordered table-calendar">
         @foreach($calendar as $key=>$row)
             <tr>
-                <td colspan="2" class="blur"><strong>{{$key}}</strong></td>
+                <td colspan="4" class="blur"><strong>{{$key}}</strong></td>
             </tr>
             @foreach($row as $cal)
                 <tr>
@@ -30,6 +33,8 @@
                         <strong>{{$cal->content}}</strong><br>
                         <i>Thành phần tham dự: </i>{{$cal->member}}
                     </td>
+                    <td class="td-action"><a href="/update?id={{$cal->id}}"><img height="20" border="0" src="/img/edit.png" title="Cập nhật lịch"></a></td>
+                    <td class="td-action"><a href="#"><img height="20" border="0" src="/img/delete.png" title="Xóa lịch"></a></td>
                 </tr>
             @endforeach
         @endforeach

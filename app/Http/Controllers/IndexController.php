@@ -14,7 +14,15 @@ class IndexController extends Controller
         if ($week == 0){
             $week = intval(date("W"));
         }
-        $data=DB::table('calendar')->where('_week', '=', $week)
+        $vip = $request->input('v');
+        if (isset($vip)){
+            $vip = "|" . $vip . "|";
+        }else{
+            $vip = "";
+        }
+        $data=DB::table('calendar')->where([
+            ['_week', '=', $week],
+            ['viphuman', 'like', "%".$vip."%"]])
             ->orderBy('date_note', "ASC")
             ->get();
         $calendar = array();
@@ -25,7 +33,7 @@ class IndexController extends Controller
             }
             $calendar[$date][] = $row;
         }
-        return view("index", ['calendar' => $calendar]);
+        return view("index", ['calendar' => $calendar, 'week' => $week, 'vip' => $vip]);
     }
 
     public function formCalendar(Request $request){
@@ -33,7 +41,38 @@ class IndexController extends Controller
     }
 
     public function addCalendar(Request $request){
-        return view("calendar.add");
+        $id = intval($request->input('id'));
+        $date = $request->input('date');
+        $time = $request->input('time');
+        $date_note = \DateTime::createFromFormat('d/m/Y H:i', $date . ' ' . $time);
+        $week = $request->input('week');
+        $member = implode(", ", $request->input('member'));
+        $vip = "|" . implode("|", $request->input('viphuman'));
+        $content = $request->input('content');
+        if ($id == 0){
+            $result = DB::table('calendar')->insert([
+                'viphuman' => $vip,
+                'content' => $content,
+                'date_note' => $date_note,
+                '_week' => $week,
+                'member' => $member
+            ]);
+            return redirect()->action(
+                'IndexController@index', ['w' => $week]
+            );
+        }else{
+            $result = DB::table('calendar')->where('id', '=', $id)->update([
+                'viphuman' => $vip,
+                'content' => $content,
+                'date_note' => $date_note,
+                '_week' => $week,
+                'member' => $member
+            ]);
+            return redirect()->action(
+                'IndexController@index', ['w' => $week]
+            );
+        }
+
     }
 
 }
