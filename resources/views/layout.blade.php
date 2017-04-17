@@ -3,50 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="{{$_ENV['ALIAS']}}/js/jquery-3.1.1.min.js"></script>
+    <script src="{{env('ALIAS')}}/js/jquery-3.1.1.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="{{$_ENV['ALIAS']}}/img/fa-icon.png">
+    <link rel="icon" href="{{env('ALIAS')}}/img/fa-icon.png">
 
-    <script src="{{$_ENV['ALIAS']}}/js/bootstrap.min.js"></script>
-    <link href="{{$_ENV['ALIAS']}}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="{{$_ENV['ALIAS']}}/css/main.css" rel="stylesheet" type="text/css">
-    <link href="{{$_ENV['ALIAS']}}/css/mine.css" rel="stylesheet" type="text/css">
-    <link href="{{$_ENV['ALIAS']}}/css/slide.css" rel="stylesheet" type="text/css">
+    <script src="{{env('ALIAS')}}/js/bootstrap.min.js"></script>
+    <link href="{{env('ALIAS')}}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="{{env('ALIAS')}}/css/main.css" rel="stylesheet" type="text/css">
+    <link href="{{env('ALIAS')}}/css/mine.css" rel="stylesheet" type="text/css">
+    <link href="{{env('ALIAS')}}/css/slide.css" rel="stylesheet" type="text/css">
     {{--<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">--}}
 
     <link rel="stylesheet" type="text/css"
-          href="{{$_ENV['ALIAS']}}/js/datatables/DataTables-1.10.13/css/dataTables.bootstrap.min.css"/>
+          href="{{env('ALIAS')}}/js/datatables/DataTables-1.10.13/css/dataTables.bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css"
-          href="{{$_ENV['ALIAS']}}/js/datatables/Buttons-1.2.4/css/buttons.bootstrap.min.css"/>
+          href="{{env('ALIAS')}}/js/datatables/Buttons-1.2.4/css/buttons.bootstrap.min.css"/>
 
-    <script type="text/javascript" src="{{$_ENV['ALIAS']}}/js/datatables/JSZip-2.5.0/jszip.min.js"></script>
-    <script type="text/javascript" src="{{$_ENV['ALIAS']}}/js/datatables/pdfmake-0.1.18/build/pdfmake.min.js"></script>
-    <script type="text/javascript" src="{{$_ENV['ALIAS']}}/js/datatables/pdfmake-0.1.18/build/vfs_fonts.js"></script>
+    <script type="text/javascript" src="{{env('ALIAS')}}/js/datatables/JSZip-2.5.0/jszip.min.js"></script>
+    <script type="text/javascript" src="{{env('ALIAS')}}/js/datatables/pdfmake-0.1.18/build/pdfmake.min.js"></script>
+    <script type="text/javascript" src="{{env('ALIAS')}}/js/datatables/pdfmake-0.1.18/build/vfs_fonts.js"></script>
     <script type="text/javascript"
-            src="{{$_ENV['ALIAS']}}/js/datatables/DataTables-1.10.13/js/jquery.dataTables.min.js"></script>
+            src="{{env('ALIAS')}}/js/datatables/DataTables-1.10.13/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript"
-            src="{{$_ENV['ALIAS']}}/js/datatables/DataTables-1.10.13/js/dataTables.bootstrap.min.js"></script>
+            src="{{env('ALIAS')}}/js/datatables/DataTables-1.10.13/js/dataTables.bootstrap.min.js"></script>
     <script type="text/javascript"
-            src="{{$_ENV['ALIAS']}}/js/datatables/Buttons-1.2.4/js/dataTables.buttons.min.js"></script>
+            src="{{env('ALIAS')}}/js/datatables/Buttons-1.2.4/js/dataTables.buttons.min.js"></script>
     <script type="text/javascript"
-            src="{{$_ENV['ALIAS']}}/js/datatables/Buttons-1.2.4/js/buttons.bootstrap.min.js"></script>
+            src="{{env('ALIAS')}}/js/datatables/Buttons-1.2.4/js/buttons.bootstrap.min.js"></script>
     <script type="text/javascript"
-            src="{{$_ENV['ALIAS']}}/js/datatables/Buttons-1.2.4/js/buttons.flash.min.js"></script>
+            src="{{env('ALIAS')}}/js/datatables/Buttons-1.2.4/js/buttons.flash.min.js"></script>
     <script type="text/javascript"
-            src="{{$_ENV['ALIAS']}}/js/datatables/Buttons-1.2.4/js/buttons.html5.min.js"></script>
+            src="{{env('ALIAS')}}/js/datatables/Buttons-1.2.4/js/buttons.html5.min.js"></script>
     <script type="text/javascript"
-            src="{{$_ENV['ALIAS']}}/js/datatables/Buttons-1.2.4/js/buttons.print.min.js"></script>
+            src="{{env('ALIAS')}}/js/datatables/Buttons-1.2.4/js/buttons.print.min.js"></script>
 
     {{--<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>--}}
-    <script src="{{$_ENV['ALIAS']}}/js/bootstrap-datepicker.js"></script>
-    <link href="{{$_ENV['ALIAS']}}/css/datepicker.css" rel="stylesheet">
+    <script src="{{env('ALIAS')}}/js/bootstrap-datepicker.js"></script>
+    <link href="{{env('ALIAS')}}/css/datepicker.css" rel="stylesheet">
 
 
-    <link href="{{$_ENV['ALIAS']}}/css/select2.css" rel="stylesheet"/>
-    <script src="{{$_ENV['ALIAS']}}/js/select2.js"></script>
-    <script src="{{$_ENV['ALIAS']}}/js/weekPicker.js"></script>
-    <script src="{{$_ENV['ALIAS']}}/js/jquery-ui.js"></script>
-    <link href="{{$_ENV['ALIAS']}}/css/jquery-ui.css" rel="stylesheet"/>
+    <link href="{{env('ALIAS')}}/css/select2.css" rel="stylesheet"/>
+    <script src="{{env('ALIAS')}}/js/select2.js"></script>
+    <script src="{{env('ALIAS')}}/js/weekPicker.js"></script>
+    <script src="{{env('ALIAS')}}/js/jquery-ui.js"></script>
+    <link href="{{env('ALIAS')}}/css/jquery-ui.css" rel="stylesheet"/>
+
+    <link href="{{env('ALIAS')}}/css/jquery-clockpicker.css" rel="stylesheet">
 
 {{--<script type="text/javascript">--}}
 {{--bkLib.onDomLoaded(function () {--}}
@@ -80,8 +82,8 @@
         @show</title>
 </head>
 <body>
-<img src="{{$_ENV['ALIAS']}}/img/top-baner.png" width="100%" class="hidden-xs hidden-sm" height="auto">
-<img src="{{$_ENV['ALIAS']}}/img/mobile-banner.png" width="100%" class="visible-xs visible-sm" height="auto">
+<img src="{{env('ALIAS')}}/img/top-baner.png" width="100%" class="hidden-xs hidden-sm" height="auto">
+<img src="{{env('ALIAS')}}/img/mobile-banner.png" width="100%" class="visible-xs visible-sm" height="auto">
 <nav class="navbar navbar-my">
     <a href="javascript:actionNav()" class="ico ico-menu" style="margin-top: 5px;">
     </a>
@@ -129,7 +131,7 @@
     <!-- Example row of columns -->
     <div class="row footer">
         <div class="col-sm-4">
-            {{--<img src="{{$_ENV['ALIAS']}}/img/moet-logo.jpg" width="120" height="auto" border="0" />--}}
+            {{--<img src="{{env('ALIAS')}}/img/moet-logo.jpg" width="120" height="auto" border="0" />--}}
         </div>
         <div class="col-sm-8 pull-right" style="text-align: right">
             <div class="footer-text">
@@ -242,7 +244,7 @@
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            url: "{{$_ENV['ALIAS']}}/report/exportsteering",
+            url: "{{env('ALIAS')}}/report/exportsteering",
             type: 'POST',
             dataType: 'json',
             data: {
@@ -254,7 +256,7 @@
             success: function (result) {
                 $(".loader").hide();
                 console.log(result);
-                window.location.href = "{{$_ENV['ALIAS']}}" + result.file;
+                window.location.href = "{{env('ALIAS')}}" + result.file;
             },
             error: function () {
                 $(".loader").hide();
@@ -266,7 +268,7 @@
     function showDetail(id) {
         $(".loader").show();
         $.ajax({
-            url: "{{$_ENV['ALIAS']}}/api/steering?id=" + id,
+            url: "{{env('ALIAS')}}/api/steering?id=" + id,
             success: function (result) {
                 $(".loader").hide();
                 var html_table = "";
