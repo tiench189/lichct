@@ -16,7 +16,9 @@
                 <div class="form-group form-inline">
                     <input type="text" id="week-picker" value="{{$week}}" class="form-control input-week" required
                            name="week">
-                    <i>(Từ <span id="start-week">{{date( 'd/m/Y', strtotime($year."W".str_pad($week,2,0,STR_PAD_LEFT)."1") )}}</span> đến <span
+                    <i>(Từ <span
+                                id="start-week">{{date( 'd/m/Y', strtotime($year."W".str_pad($week,2,0,STR_PAD_LEFT)."1") )}}</span>
+                        đến <span
                                 id="end-week">{{date( 'd/m/Y', strtotime($year."W".str_pad($week,2,0,STR_PAD_LEFT)."7") )}}</span>)</i>
                 </div>
             </td>
@@ -31,7 +33,8 @@
                         <td>
                             <div class="radio-inline radio-day">
                                 <input type="radio" name="date_note" id="i_2"
-                                       value="{{date( 'd/m/Y', strtotime($year."W".str_pad($week,2,0,STR_PAD_LEFT)."1") )}}" required>
+                                       value="{{date( 'd/m/Y', strtotime($year."W".str_pad($week,2,0,STR_PAD_LEFT)."1") )}}"
+                                       required>
                                 Thứ 2
                                 <div id="d_2">{{date( 'd/m/Y', strtotime($year."W".str_pad($week,2,0,STR_PAD_LEFT)."1") )}}</div>
                             </div>
@@ -139,7 +142,8 @@
         <tr>
             <td class="left-label">6. Nội dung:</td>
             <td>
-                <textarea class="form-control" rows="2" name="content" required>{{($id > 0)?$calendar->content:''}}</textarea>
+                <textarea class="form-control" rows="2" name="content"
+                          required>{{($id > 0)?$calendar->content:''}}</textarea>
             </td>
         </tr>
     </table>
@@ -165,12 +169,26 @@
             }
         });
         @endif
-        $("input[name='viphuman[]']").change(function(){
-            console.log("change");
-            $("input[name='viphuman[]']:checked").each(function () {
-                console.log($(this).attr('vip'));
-                $("textarea[name='content']").html();
+        $("input[name='viphuman[]']").change(function () {
+            var content = '';
+
+            $("input[name='viphuman[]']:checked").each(function (idx) {
+                if ($("input[name='viphuman[]']:checked").length == 4) {
+                    content = "Chánh Văn Phòng và các PCVP "
+                } else {
+                    content += $(this).attr('vip');
+                    if (idx == $("input[name='viphuman[]']:checked").length - 2) {
+                        content += ' và ';
+                    } else if (idx == $("input[name='viphuman[]']:checked").length - 1) {
+                        content += ' ';
+                    } else {
+                        content += ", ";
+                    }
+                }
+
             });
+
+            $("textarea[name='content']").html(content);
         });
 
         $('#add-calendar').submit(function () {
