@@ -25,8 +25,7 @@
         </div>
         <div class="pull-right text-center blur" style="padding-bottom: 40px">
             <strong>LỊCH CÔNG TÁC CỦA LÃNH ĐẠO VĂN PHÒNG</strong><br>
-            Tuần <input type="text" id="week-picker" value="{{$week}}" class="form-control"
-                        style="width: 45px; display: initial; color: blue"><br>
+            Tuần <input type="text" id="week-picker" value="{{$week}}" class="form-control input-week blur"><br>
             <i>(Từ <span id="start-week">{{date( 'd/m/Y', strtotime( 'monday this week' ) )}}</span> đến <span
                         id="end-week">{{date( 'd/m/Y', strtotime( 'sunday this week' ) )}}</span>)</i>
         </div>

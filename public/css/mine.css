@@ -1,6 +1,40 @@
-.blur{
+.blur {
     color: blue;
 }
 
-.table-calendar{
+.input-week {
+    width: 45px !important;
+    display: initial !important;
+}
+
+.input-clock{
+    width: 100px !important;
+    z-index: 0 !important;
+}
+
+.radio-day > input[type=radio] {
+    margin-top: 13px;
+}
+
+.left-label {
+    font-weight: bold;
+}
+
+.table-borderless {
+    margin-bottom: 0px !important;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.table-day {
+    color: #CC9900;
+    border-collapse: collapse;
+    border: 1px solid;
 }

@@ -39,14 +39,21 @@ class IndexController extends Controller
 
     public function formCalendar(Request $request)
     {
-        return view("calendar.add");
+        $id = intval($request->input('id'));
+        $week = intval($request->input('w'));
+        if ($week == 0) {
+            $week = intval(date("W"));
+        }
+        $vip = DB::table('viphuman')->get();
+        $unit = DB::table('unit')->where('parent_id', '>', 0)->get();
+        return view("calendar.add", ['week' => $week, 'vip' => $vip, 'unit' => $unit, 'id' => $id]);
     }
 
     public function addCalendar(Request $request)
     {
         $id = intval($request->input('id'));
-        $date = $request->input('date');
-        $time = $request->input('time');
+        $date = $request->input('date_note');
+        $time = $request->input('time_in_day');
         $date_note = \DateTime::createFromFormat('d/m/Y H:i', $date . ' ' . $time);
         $week = $request->input('week');
         $member = implode(", ", $request->input('member'));
