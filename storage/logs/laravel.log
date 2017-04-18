@@ -18077,3 +18077,193 @@ Stack trace:
 #50 C:\xampp\htdocs\lichcongtac\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #51 C:\xampp\htdocs\lichcongtac\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #52 {main}  
+[2017-04-18 14:58:08] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 14:58:26] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 14:58:29] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 14:58:40] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 14:59:04] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:00:04] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:02:37] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:02:42] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:03:03] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:03:06] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:03:16] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:03:25] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:03:28] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:3:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:3:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:3:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  
+[2017-04-18 15:03:43] local.ERROR: exception 'InvalidArgumentException' with message 'The "D:\Environment\xampp\htdocs\lichct\storage\framework/sessions" directory does not exist.' in D:\Environment\xampp\htdocs\lichct\vendor\symfony\finder\Finder.php:546
+Stack trace:
+#0 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(104): Symfony\Component\Finder\Finder->in('D:\\Environment\\...')
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(134): Illuminate\Session\FileSessionHandler->gc(7200)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(61): Illuminate\Session\Middleware\StartSession->collectGarbage(Object(Illuminate\Session\Store))
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#7 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#8 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Cookie\Middleware\EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Router.php(561): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#13 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Router.php(520): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#14 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Router.php(498): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#15 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(174): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#16 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(30): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#17 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php(30): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\TransformsRequest->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php(27): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\ValidatePostSize->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php(46): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(148): Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php(53): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php(102): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(149): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#32 D:\Environment\xampp\htdocs\lichct\public\index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#33 {main}  
+[2017-04-18 15:03:44] local.ERROR: exception 'ErrorException' with message 'file_put_contents(D:\Environment\xampp\htdocs\lichct\storage\framework/sessions/ApmbfuUnMXmDM7iWBBYt4hxUbWRGqhjKQGAMxeVG): failed to open stream: No such file or directory' in D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', 'D:\\Environment\\...', 111, Array)
+#1 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(111): file_put_contents('D:\\Environment\\...', 'a:2:{s:6:"_toke...', 2)
+#2 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\FileSessionHandler.php(83): Illuminate\Filesystem\Filesystem->put('D:\\Environment\\...', 'a:2:{s:6:"_toke...', true)
+#3 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Store.php(129): Illuminate\Session\FileSessionHandler->write('ApmbfuUnMXmDM7i...', 'a:2:{s:6:"_toke...')
+#4 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Session\Middleware\StartSession.php(88): Illuminate\Session\Store->save()
+#5 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(216): Illuminate\Session\Middleware\StartSession->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#6 D:\Environment\xampp\htdocs\lichct\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(187): Illuminate\Foundation\Http\Kernel->terminateMiddleware(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#7 D:\Environment\xampp\htdocs\lichct\public\index.php(58): Illuminate\Foundation\Http\Kernel->terminate(Object(Illuminate\Http\Request), Object(Illuminate\Http\Response))
+#8 {main}  

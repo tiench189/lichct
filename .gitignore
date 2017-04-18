@@ -8,3 +8,6 @@ Homestead.yaml
 .env
 /storage
 /public/file/
+_ide_helper.php
+vendor/barryvdh/
+vendor/symfony/class-loader/
