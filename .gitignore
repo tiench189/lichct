@@ -6,5 +6,6 @@
 Homestead.json
 Homestead.yaml
 .env
-/storage
+/storage/views
+/storage/cache
 /public/file/

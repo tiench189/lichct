@@ -158,20 +158,8 @@ label {
     margin-bottom: 10px;
 }
 
-.btn-my:hover {
-    color: white;
-}
-
-.btn-my:active {
-    color: white;
-}
-
-.btn-my:focus {
-    color: white;
-}
-
-.btn-my:visited {
-    color: white;
+.btn-my:hover,.btn-my:active,.btn-my:focus,.btn-my:visited{
+    color: white !important;
 }
 
 .buttons-pdf {
