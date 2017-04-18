@@ -9,38 +9,41 @@ use Illuminate\Support\Facades\DB;
 class IndexController extends Controller
 {
     //
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
         $week = intval($request->input('w'));
-        if ($week == 0){
+        if ($week == 0) {
             $week = intval(date("W"));
         }
-        $vip = $request->input('v');
-        if (isset($vip)){
-            $vip = "|" . $vip . "|";
-        }else{
+        $viphuman = $request->input('v');
+        if (isset($viphuman)) {
+            $vip = "|" . $viphuman . "|";
+        } else {
             $vip = "";
         }
-        $data=DB::table('calendar')->where([
+        $data = DB::table('calendar')->where([
             ['_week', '=', $week],
-            ['viphuman', 'like', "%".$vip."%"]])
+            ['viphuman', 'like', "%" . $vip . "%"]])
             ->orderBy('date_note', "ASC")
             ->get();
         $calendar = array();
-        foreach ($data as $row){
+        foreach ($data as $row) {
             $date = Utils::formatTime2Day($row->date_note);
-            if (! isset($calendar[$date])){
+            if (!isset($calendar[$date])) {
                 $calendar[$date] = array();
             }
             $calendar[$date][] = $row;
         }
-        return view("index", ['calendar' => $calendar, 'week' => $week, 'vip' => $vip]);
+        return view("index", ['calendar' => $calendar, 'week' => $week, 'vip' => $viphuman]);
     }
 
-    public function formCalendar(Request $request){
+    public function formCalendar(Request $request)
+    {
         return view("calendar.add");
     }
 
-    public function addCalendar(Request $request){
+    public function addCalendar(Request $request)
+    {
         $id = intval($request->input('id'));
         $date = $request->input('date');
         $time = $request->input('time');
@@ -49,7 +52,7 @@ class IndexController extends Controller
         $member = implode(", ", $request->input('member'));
         $vip = "|" . implode("|", $request->input('viphuman'));
         $content = $request->input('content');
-        if ($id == 0){
+        if ($id == 0) {
             $result = DB::table('calendar')->insert([
                 'viphuman' => $vip,
                 'content' => $content,
@@ -60,7 +63,7 @@ class IndexController extends Controller
             return redirect()->action(
                 'IndexController@index', ['w' => $week]
             );
-        }else{
+        } else {
             $result = DB::table('calendar')->where('id', '=', $id)->update([
                 'viphuman' => $vip,
                 'content' => $content,
@@ -75,4 +78,11 @@ class IndexController extends Controller
 
     }
 
+    #region Nguoidung Delete
+    public function deleteCalendar(Request $request)
+    {
+        $callback = $request->input('back');
+        $result = DB::table('calendar')->where('id', $request->input('id'))->delete();
+        return redirect($callback);
+    }
 }

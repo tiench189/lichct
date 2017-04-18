@@ -1,7 +1,9 @@
 var globalTriggeringElement;
-var globalAdditionalFunction = function() { null; };
+var globalAdditionalFunction = function () {
+    null;
+};
 
-var getDateFromISOWeek = function(ywString, separator) {
+var getDateFromISOWeek = function (ywString, separator) {
     try {
         //console.log(ywString);
         var ywArray = ywString.split(separator);
@@ -21,7 +23,7 @@ var getDateFromISOWeek = function(ywString, separator) {
     }
 };
 
-var showWeekCalendar = function(triggeringElement, additionalFunction) {
+var showWeekCalendar = function (triggeringElement, additionalFunction) {
     globalTriggeringElement = triggeringElement;
     globalAdditionalFunction = additionalFunction;
     var prevItem = $(triggeringElement).prev();
@@ -31,11 +33,11 @@ var showWeekCalendar = function(triggeringElement, additionalFunction) {
     prevItem.datepicker("show");
 };
 
-var setWeekCalendar = function(settingElement) {
+var setWeekCalendar = function (settingElement) {
     var startDate;
     var endDate;
-    var selectCurrentWeek = function() {
-        window.setTimeout(function() {
+    var selectCurrentWeek = function () {
+        window.setTimeout(function () {
             var activeElement = $("#ui-datepicker-div .ui-state-active");
             var tdElement = activeElement.parent();
             var trElement = tdElement.parent();
@@ -50,7 +52,7 @@ var setWeekCalendar = function(settingElement) {
         selectOtherMonths: true,
         showWeek: true,
         firstDay: 1,
-        onSelect: function(dateText, inst) {
+        onSelect: function (dateText, inst) {
             var datepickerValue = $(this).datepicker('getDate');
             var dateObj = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate());
             var weekNum = $.datepicker.iso8601Week(dateObj);
@@ -60,40 +62,56 @@ var setWeekCalendar = function(settingElement) {
             var ywString = /*datepickerValue.getFullYear() + '-' + */weekNum;
             $(this).val(ywString);
             $(this).prev().html(ywString);
-            startDate = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate() - datepickerValue.getDay() + 1);
-            endDate = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate() - datepickerValue.getDay() + 7);
+
+            var dateMinus = datepickerValue.getDay() == 0 ? 7 : 0;
+            console.log(datepickerValue.getDate() + ":" + datepickerValue.getDay());
+
+            startDate = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate() - datepickerValue.getDay() + 1 - dateMinus);
+            endDate = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate() - datepickerValue.getDay() + 7 - dateMinus);
             $("#start-week").html(formatDate(startDate));
             $("#end-week").html(formatDate(endDate));
+
+            //change date in table
+            for (i = 2; i <= 8; i++) {
+                var date = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate() - datepickerValue.getDay() + (i - dateMinus - 1));
+                $("#d_" + i).html(formatDate(date));
+                $("#i_" + i).val(formatDate(date));
+            }
+
             selectCurrentWeek();
             $(this).data('datepicker').inline = true;
             globalAdditionalFunction(globalTriggeringElement);
         },
-        onClose: function() {
+        onClose: function () {
             $(this).data('datepicker').inline = false;
         },
-        beforeShow: function() {
+        beforeShow: function () {
             selectCurrentWeek();
         },
-        beforeShowDay: function(datepickerValue) {
+        beforeShowDay: function (datepickerValue) {
             var cssClass = '';
             if (datepickerValue >= startDate && datepickerValue <= endDate)
                 cssClass = 'ui-datepicker-current-day';
             selectCurrentWeek();
             return [true, cssClass];
         },
-        onChangeMonthYear: function(year, month, inst) {
+        onChangeMonthYear: function (year, month, inst) {
             selectCurrentWeek();
         }
     }).datepicker('widget').addClass('ui-weekpicker');
 
-    $('body').on('mousemove', '.ui-weekpicker .ui-datepicker-calendar tr', function() { $(this).find('td a').addClass('ui-state-hover'); });
-    $('body').on('mouseleave', '.ui-weekpicker .ui-datepicker-calendar tr', function() { $(this).find('td a').removeClass('ui-state-hover'); });
+    $('body').on('mousemove', '.ui-weekpicker .ui-datepicker-calendar tr', function () {
+        $(this).find('td a').addClass('ui-state-hover');
+    });
+    $('body').on('mouseleave', '.ui-weekpicker .ui-datepicker-calendar tr', function () {
+        $(this).find('td a').removeClass('ui-state-hover');
+    });
 
     // function for doing something more
 
 };
 
-var convertToWeekPicker = function(targetElement) {
+var convertToWeekPicker = function (targetElement) {
     if (targetElement.prop("tagName") == "INPUT" && (targetElement.attr("type") == "text" || targetElement.attr("type") == "hidden")) {
         var week = targetElement.val();
         $('<span class="displayDate" style="display:none">' + week + '</span>').insertBefore(targetElement);

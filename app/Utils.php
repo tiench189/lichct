@@ -14,9 +14,30 @@ use Illuminate\Support\Facades\DB;
 
 class Utils extends Model
 {
-    public static function getVipHumans()
+    public static function getVipHumans($week)
     {
-        return DB::table('viphuman')->get();
+        $vip =  DB::table('viphuman')->get();
+        $data = array();
+        foreach ($vip as $row){
+            $temp = array();
+            $temp['id'] = $row->id;
+            $temp['name'] = $row->name;
+            $count =DB::table('calendar')->where([
+                ['_week', '=', $week],
+                ['viphuman', 'like', "%".$row->id."%"]])
+                ->select('id')
+                ->get();
+            $temp['count'] = count($count);
+            $data[] = $temp;
+        }
+        return $data;
+    }
+
+    public static function countInWeek($week){
+        $count =DB::table('calendar')->where('_week', '=', $week)
+            ->select('id')
+            ->get();
+        return count($count);
     }
 
     public static function formatTime2Day($date)
