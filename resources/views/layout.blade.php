@@ -152,7 +152,6 @@ if (!isset($week)){
 </body>
 <script>
     var open = true;
-    console.log(window.innerWidth + "/" + window.innerHeight)
     if (window.innerWidth < window.innerHeight || window.innerWidth < 800) {
         open = false;
     }

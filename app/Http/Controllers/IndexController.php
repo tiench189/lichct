@@ -16,7 +16,7 @@ class IndexController extends Controller
             $week = intval(date("W"));
         }
         $viphuman = $request->input('v');
-        if (isset($viphuman)) {
+        if (isset($viphuman) && $viphuman != "") {
             $vip = "|" . $viphuman . "|";
         } else {
             $vip = "";
@@ -46,7 +46,16 @@ class IndexController extends Controller
         }
         $vip = DB::table('viphuman')->get();
         $unit = DB::table('unit')->where('parent_id', '>', 0)->get();
-        return view("calendar.add", ['week' => $week, 'vip' => $vip, 'unit' => $unit, 'id' => $id]);
+        $arrunit = array();
+        foreach ($unit as $row){
+            $arrunit[] = $row->name;
+        }
+        $calendar = null;
+        if ($id > 0){
+            $calendar = DB::table('calendar')->where('id', $id)->first();
+        }
+        return view("calendar.add", ['week' => $week, 'vip' => $vip, 'unit' => $unit, 'id' => $id,
+            'calendar' => $calendar, 'arrunit' => $arrunit]);
     }
 
     public function addCalendar(Request $request)

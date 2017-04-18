@@ -34,6 +34,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="cdb6d373-544c-4fdf-b0a4-bd9f4a5154c6" name="lichct.123.17" url="http://10.0.123.17">
+        <fileTransfer host="10.0.123.17" port="22" rootFolder="/var/www/html/lichcongtac" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

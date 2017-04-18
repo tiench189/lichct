@@ -38,7 +38,17 @@ var setWeekCalendar = function (settingElement) {
     var endDate;
     var selectCurrentWeek = function () {
         window.setTimeout(function () {
+            var datew = getDateOfWeek(settingElement.val());
             var activeElement = $("#ui-datepicker-div .ui-state-active");
+            $(".ui-state-default").each(function(){
+               var day = $(this).html();
+               var month =  $(this).parent().attr('data-month');
+               var year =  $(this).parent().attr('data-year');
+               var md = year + "-" + month + "-" + day;
+               if (datew == md){
+                   activeElement = $(this);
+               }
+            });
             var tdElement = activeElement.parent();
             var trElement = tdElement.parent();
 
@@ -62,9 +72,9 @@ var setWeekCalendar = function (settingElement) {
             var ywString = /*datepickerValue.getFullYear() + '-' + */weekNum;
             $(this).val(ywString);
             $(this).prev().html(ywString);
+            $(this).trigger('change');
 
             var dateMinus = datepickerValue.getDay() == 0 ? 7 : 0;
-            console.log(datepickerValue.getDate() + ":" + datepickerValue.getDay());
 
             startDate = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate() - datepickerValue.getDay() + 1 - dateMinus);
             endDate = new Date(datepickerValue.getFullYear(), datepickerValue.getMonth(), datepickerValue.getDate() - datepickerValue.getDay() + 7 - dateMinus);
@@ -133,4 +143,21 @@ function formatDate(date) {
     if (day.length < 2) day = '0' + day;
 
     return [day, month, year].join('/');
+}
+
+function getDateOfWeek(w) {
+    var d = (1 + (w) * 7); // 1st of January + 7 days for each week
+    var currentTime = new Date();
+    var y = currentTime.getFullYear()
+    var date = new Date(y, 0, d);
+    return date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+}
+
+function getMonthFromPicker(m){
+    var mon = parseInt(m);
+    mon ++;
+    if (mon < 10){
+        return "0" + mon;
+    }
+    return mon;
 }

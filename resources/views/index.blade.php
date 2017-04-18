@@ -31,7 +31,7 @@
         </div>
     </div>
     <div style="position: absolute; margin-top: 70px">
-        <a class="btn btn-my" href="/update">Đăng kí lịch</a>
+        <a class="btn btn-my" href="/update?w={{$week}}">Đăng kí lịch</a>
     </div>
     <table class="table table-bordered table-calendar">
         @foreach($calendar as $key=>$row)
@@ -54,5 +54,13 @@
 
     <script>
         convertToWeekPicker($("#week-picker"));
+        $("#week-picker").change(function () {
+            var old = $(this).val();
+            setTimeout(function () {
+                if ($("#week-picker").val() == old){
+                    window.location.href = "/?w=" + old + "{{($vip == '')?'':'&v='.$vip}}"
+                }
+            }, 500);
+        });
     </script>
 @stop
