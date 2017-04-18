@@ -6,7 +6,8 @@
 Homestead.json
 Homestead.yaml
 .env
-/storage
+/storage/views
+/storage/cache
 /public/file/
 _ide_helper.php
 vendor/barryvdh/

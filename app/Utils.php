@@ -24,8 +24,9 @@ class Utils extends Model
             $temp['name'] = $row->name;
             $count =DB::table('calendar')->where([
                 ['_week', '=', $week],
-                ['viphuman', 'like', "%".$row->id."%"]])
+                ['viphuman', 'like', "%|".$row->id."|%"]])
                 ->select('id')
+                ->distinct()
                 ->get();
             $temp['count'] = count($count);
             $data[] = $temp;
