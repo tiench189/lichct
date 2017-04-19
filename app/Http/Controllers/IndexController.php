@@ -65,7 +65,7 @@ class IndexController extends Controller
         $time = $request->input('time_in_day');
         $date_note = \DateTime::createFromFormat('d/m/Y H:i', $date . ' ' . $time);
         $week = $request->input('week');
-        $member = implode(", ", $request->input('member'));
+        $member = implode("; ", $request->input('member'));
         $vip = "|" . implode("|", $request->input('viphuman'));
         $content = $request->input('content');
         if ($id == 0) {
