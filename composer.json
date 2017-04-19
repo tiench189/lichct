@@ -14,7 +14,8 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4",
         "mpdf/mpdf": "^6.1",
-        "phpexcel/phpexcel": "dev-master"
+        "phpexcel/phpexcel": "dev-master",
+        "phpoffice/phpword": "^0.13.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
