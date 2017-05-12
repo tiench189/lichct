@@ -33,6 +33,7 @@
     </div>
     <div style="position: absolute; margin-top: 70px">
         <a class="btn btn-my" href="/update?w=<?php echo e($week); ?>">Đăng kí lịch</a>
+        <a id="export-doc" href="/export-calendar-to-word?w=<?php echo e($week); ?>&vip=<?php echo e($vip); ?>" class="btn btn-my" style="margin-bottom: 10px">Xuất lịch</a>
     </div>
     <table class="table table-bordered table-calendar">
         <?php $__currentLoopData = $calendar; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

@@ -15,3 +15,4 @@ Route::get( '/','IndexController@index' )->name('index');
 Route::get( '/update','IndexController@formCalendar' )->name('form-calendar');
 Route::post( '/update','IndexController@addCalendar' )->name('add-calendar');
 Route::post( '/delete','IndexController@deleteCalendar' )->name('delete-calendar');
+Route::get('/export-calendar-to-word', 'ExportController@exportCalendarToWord')->name('export-calendar-to-word');
