@@ -95,7 +95,7 @@ if (!isset($week)){
     <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
             <a class="dropdown-toggle top-menu" data-toggle="dropdown"
-               href="#">Tài khoản
+               href="#">{{Session::get('fullname')}}
                 <span class="caret"></span></a>
         </li>
     </ul>

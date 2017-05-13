@@ -11,6 +11,12 @@ class IndexController extends Controller
     //
     public function index(Request $request)
     {
+        if (!$request->session()->has('auth') || !$request->session()->get('auth')){
+//            return view('authfailed');
+            $request->session()->put('auth', true);
+            $request->session()->put('username', 'account');
+            $request->session()->put('fullname', 'Tài khoản');
+        }
         $week = intval($request->input('w'));
         if ($week == 0) {
             $week = intval(date("W"));
@@ -39,6 +45,9 @@ class IndexController extends Controller
 
     public function formCalendar(Request $request)
     {
+        if (!$request->session()->has('auth') || !$request->session()->get('auth')){
+            return view('authfailed');
+        }
         $id = intval($request->input('id'));
         $week = intval($request->input('w'));
         if ($week == 0) {
@@ -47,11 +56,11 @@ class IndexController extends Controller
         $vip = DB::table('viphuman')->get();
         $unit = DB::table('unit')->where('parent_id', '>', 0)->get();
         $arrunit = array();
-        foreach ($unit as $row){
+        foreach ($unit as $row) {
             $arrunit[] = $row->name;
         }
         $calendar = null;
-        if ($id > 0){
+        if ($id > 0) {
             $calendar = DB::table('calendar')->where('id', $id)->first();
         }
         return view("calendar.add", ['week' => $week, 'vip' => $vip, 'unit' => $unit, 'id' => $id,
@@ -60,12 +69,18 @@ class IndexController extends Controller
 
     public function addCalendar(Request $request)
     {
+        if (!$request->session()->has('auth') || !$request->session()->get('auth')){
+            return view('authfailed');
+        }
         $id = intval($request->input('id'));
         $date = $request->input('date_note');
         $time = $request->input('time_in_day');
         $date_note = \DateTime::createFromFormat('d/m/Y H:i', $date . ' ' . $time);
         $week = $request->input('week');
-        $member = implode("; ", $request->input('member'));
+        $member = "";
+        if (count($request->input('member')) > 0) {
+            $member = implode("; ", $request->input('member'));
+        }
         $vip = "|" . implode("|", $request->input('viphuman'));
         $content = $request->input('content');
         if ($id == 0) {
@@ -100,5 +115,27 @@ class IndexController extends Controller
         $callback = $request->input('back');
         $result = DB::table('calendar')->where('id', $request->input('id'))->delete();
         return redirect($callback);
+    }
+
+    public function autoLogin(Request $request)
+    {
+        $username = $request->username;
+        $fullname = $request->fullname;
+        $sesskey = $request->sesskey;
+        if (!isset($username) || !isset($fullname) || !isset($sesskey)) {
+            return redirect()->action('IndexController@authenFailed');
+        }
+        if ($sesskey != md5($username . date("Ymd") . env("SESSKEY"))) {
+            return redirect()->action('IndexController@authenFailed');
+        }
+
+        $request->session()->put('auth', true);
+        $request->session()->put('username', $username);
+        $request->session()->put('fullname', $fullname);
+        return redirect()->action('IndexController@index');
+    }
+
+    public function authenFailed(Request $request){
+        return view('authfailed');
     }
 }
